@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
+  overflow: hidden;
+}
+
+/* Overlay com gradiente animado */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.65)
+  );
+  animation: gradientMove 14s ease infinite;
+  z-index: 1;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sparkles */
+#sparkles {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+}
+
+/* Layout */
+.container {
+  position: relative;
+  z-index: 3;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  text-align: center;
+  padding: 2.5rem;
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.4);
+  max-width: 360px;
+  width: 90%;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+h1 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.role {
+  color: #d1d1d1;
+  font-size: 0.95rem;
+  min-height: 22px;
+}
+
+.links {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.7rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.12);
+  transition: all 0.3s ease;
+}
+
+.links a i {
+  margin-right: 8px;
+}
+
+.links a:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
