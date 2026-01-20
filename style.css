@@ -1,4 +1,4 @@
-/* ================== RESET & FONT ================== */
+/* ================== RESET & FONT PADRÃO ================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +6,8 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* ================== FONTE LUCIDITY EXPAND ================== */
-@import url("https://api.fontshare.com/v2/css?f[]=lucidity-expand@400,700&display=swap");
-
-:root {
-  --font-lucidity: "Lucidity Expand", sans-serif;
-}
+/* ================== FONT GOOGLE - RAJDHANI ================== */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
 
 /* ================== BODY & BACKGROUND ================== */
 body {
@@ -84,7 +80,7 @@ body {
 
 /* ================== NOME ================== */
 h1 {
-  font-family: var(--font-lucidity), sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   color: #ffffff;
   font-weight: 700;
   font-size: 28px;
