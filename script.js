@@ -1,5 +1,5 @@
 /* TYPEWRITER */
-const text = "Junior QA Engineer · Automation · Manual Testing";
+const text = "Junior QA Engineer · Manual Testing · Automation Testing";
 let index = 0;
 const speed = 60;
 const target = document.getElementById("typewriter");
@@ -26,7 +26,7 @@ let particles = [];
 window.addEventListener("mousemove", e => {
   mouse.x = e.clientX;
   mouse.y = e.clientY;
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 3; i++) {
     particles.push(new Particle());
   }
 });
@@ -38,12 +38,12 @@ window.addEventListener("resize", () => {
 
 class Particle {
   constructor() {
-    this.x = mouse.x;
-    this.y = mouse.y;
+    this.x = mouse.x + (Math.random() - 0.5) * 30;
+    this.y = mouse.y + (Math.random() - 0.5) * 30;
     this.size = Math.random() * 2 + 1;
-    this.speedX = (Math.random() - 0.5);
-    this.speedY = (Math.random() - 0.5);
-    this.life = 50;
+    this.speedX = (Math.random() - 0.5) * 3;
+    this.speedY = (Math.random() - 0.5) * 3;
+    this.life = 60;
   }
 
   update() {
@@ -53,7 +53,7 @@ class Particle {
   }
 
   draw() {
-    ctx.fillStyle = "rgba(255,255,255,0.8)";
+    ctx.fillStyle = "rgba(80, 170, 255, 0.85)";
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.fill();
