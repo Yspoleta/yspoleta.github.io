@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* ================== FONT GOOGLE - RAJDHANI ================== */
+/* ================== GOOGLE FONTS ================== */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
 
 /* ================== BODY & BACKGROUND ================== */
@@ -80,7 +80,7 @@ body {
 
 /* ================== NOME ================== */
 h1 {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Rajdhani', sans-serif !important;
   color: #ffffff;
   font-weight: 700;
   font-size: 28px;
