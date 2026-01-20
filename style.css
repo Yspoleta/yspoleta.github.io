@@ -1,4 +1,3 @@
-/* ================== RESET ================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +5,8 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* ================== GOOGLE FONTS ================== */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
 
-/* ================== BODY & BACKGROUND ================== */
 body {
   height: 100vh;
   background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
@@ -17,7 +14,7 @@ body {
   position: relative;
 }
 
-/* ================== OVERLAY COM GRADIENTE ANIMADO ================== */
+/* Overlay gradiente animado */
 .overlay {
   position: fixed;
   inset: 0;
@@ -28,7 +25,7 @@ body {
     rgba(0,0,0,0.65)
   );
   animation: gradientMove 14s ease infinite;
-  z-index: 1;
+  z-index: 2;
 }
 
 @keyframes gradientMove {
@@ -37,7 +34,7 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* ================== SPARKLES ================== */
+/* Sparkles */
 #sparkles {
   position: fixed;
   top: 0;
@@ -45,25 +42,25 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 4;
+  z-index: 5; /* acima do overlay e card */
 }
 
-/* ================== CONTAINER CENTRAL ================== */
+/* Container central */
 .container {
   position: relative;
-  z-index: 3;
+  z-index: 4; /* abaixo do canvas */
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* ================== CARD COM FUNDO NEON ================== */
+/* Card */
 .card {
   text-align: center;
   padding: 2.5rem;
   backdrop-filter: blur(12px);
-  background: rgba(0, 180, 255, 0.08); /* neon azul suave */
+  background: rgba(0, 180, 255, 0.08);
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 180, 255, 0.5), 
               0 0 40px rgba(0, 180, 255, 0.3), 
@@ -71,9 +68,9 @@ body {
   max-width: 360px;
   width: 90%;
   border: 1px solid rgba(0, 180, 255, 0.4);
+  z-index: 3;
 }
 
-/* ================== AVATAR ================== */
 .avatar {
   width: 120px;
   height: 120px;
@@ -82,7 +79,6 @@ body {
   border: 2px solid rgba(255,255,255,0.4);
 }
 
-/* ================== NOME ================== */
 h1 {
   font-family: 'Rajdhani', sans-serif !important;
   color: #ffffff;
@@ -92,7 +88,6 @@ h1 {
   text-shadow: 0 0 8px rgba(0, 180, 255, 0.6);
 }
 
-/* ================== CARGO / TYPEWRITER ================== */
 .role {
   color: #d1d1d1;
   font-size: 0.95rem;
@@ -100,7 +95,7 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-/* ================== LINKS / BOTÕES ================== */
+/* Links neon */
 .links {
   display: flex;
   flex-direction: column;
@@ -122,7 +117,6 @@ h1 {
   margin-right: 8px;
 }
 
-/* ================== NEON HOVER AZUL-CIANO ================== */
 .links a:hover {
   background: rgba(0, 180, 255, 0.2);
   color: #00b4ff;
@@ -130,7 +124,6 @@ h1 {
   transform: translateY(-3px);
 }
 
-/* ================== RESPONSIVO ================== */
 @media screen and (max-width: 400px) {
   .card {
     padding: 1.8rem;
