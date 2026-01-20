@@ -51,16 +51,17 @@ body {
   justify-content: center;
 }
 
-/* CARD */
+/* CARD COM FUNDO NEON */
 .card {
   text-align: center;
   padding: 2.5rem;
   backdrop-filter: blur(12px);
-  background: rgba(255,255,255,0.08);
+  background: rgba(0, 180, 255, 0.08); /* neon azul suave */
   border-radius: 20px;
-  box-shadow: 0 0 40px rgba(0,0,0,0.4);
+  box-shadow: 0 0 20px rgba(0, 180, 255, 0.5), 0 0 40px rgba(0, 180, 255, 0.3), 0 0 60px rgba(0, 180, 255, 0.2);
   max-width: 360px;
   width: 90%;
+  border: 1px solid rgba(0, 180, 255, 0.4);
 }
 
 /* AVATAR */
