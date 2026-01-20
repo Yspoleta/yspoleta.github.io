@@ -1,3 +1,4 @@
+/* RESET & FONT */
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +6,15 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* BODY & BACKGROUND */
 body {
   height: 100vh;
   background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
   overflow: hidden;
+  position: relative;
 }
 
-/* Overlay com gradiente animado */
+/* OVERLAY COM GRADIENTE ANIMADO */
 .overlay {
   position: fixed;
   inset: 0;
@@ -31,14 +34,14 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Sparkles */
+/* SPARKLES */
 #sparkles {
   position: fixed;
   inset: 0;
   z-index: 2;
 }
 
-/* Layout */
+/* CONTAINER CENTRAL */
 .container {
   position: relative;
   z-index: 3;
@@ -48,6 +51,7 @@ body {
   justify-content: center;
 }
 
+/* CARD */
 .card {
   text-align: center;
   padding: 2.5rem;
@@ -59,6 +63,7 @@ body {
   width: 90%;
 }
 
+/* AVATAR */
 .avatar {
   width: 120px;
   height: 120px;
@@ -67,19 +72,23 @@ body {
   border: 2px solid rgba(255,255,255,0.4);
 }
 
+/* NOME */
 h1 {
   color: #ffffff;
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
+/* CARGO / TYPEWRITER */
 .role {
   color: #d1d1d1;
   font-size: 0.95rem;
   min-height: 22px;
+  margin-bottom: 1.5rem;
 }
 
+/* LINKS / BOTÕES */
 .links {
-  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -88,17 +97,33 @@ h1 {
 .links a {
   color: #ffffff;
   text-decoration: none;
-  padding: 0.7rem;
+  padding: 0.7rem 1rem;
   border-radius: 12px;
   background: rgba(255,255,255,0.12);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  font-weight: 500;
 }
 
 .links a i {
   margin-right: 8px;
 }
 
+/* NEON HOVER AZUL-CIANO */
 .links a:hover {
-  background: rgba(255,255,255,0.25);
-  transform: translateY(-2px);
+  background: rgba(0, 180, 255, 0.2);
+  color: #00b4ff;
+  box-shadow: 0 0 10px #00b4ff, 0 0 20px #00b4ff, 0 0 30px #00b4ff;
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 400px) {
+  .card {
+    padding: 1.8rem;
+  }
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
 }
