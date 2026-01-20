@@ -25,11 +25,11 @@ class Sparkle {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.size = Math.random() * 3 + 1;
+    this.size = Math.random() * 4 + 1.5; // aumenta o tamanho
     this.speedX = (Math.random() - 0.5) * 1.5;
     this.speedY = (Math.random() - 0.5) * 1.5;
-    this.color = "rgba(0,180,255,0.8)";
-    this.life = 100;
+    this.color = "rgba(0, 255, 255, 0.9)"; // ciano
+    this.life = 120; // dura um pouco mais
   }
   update() {
     this.x += this.speedX;
@@ -56,7 +56,7 @@ function animate() {
 animate();
 
 canvas.addEventListener("mousemove", e => {
-  for(let i=0;i<3;i++){
+  for(let i=0;i<4;i++){ // mais sparkles por movimento
     sparkles.push(new Sparkle(e.clientX, e.clientY));
   }
 });
