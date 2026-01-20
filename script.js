@@ -16,8 +16,13 @@ typeWriter();
 const canvas = document.getElementById("sparkles");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 
 let sparkles = [];
 
@@ -25,11 +30,11 @@ class Sparkle {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.size = Math.random() * 4 + 1.5; // aumenta o tamanho
+    this.size = Math.random() * 4 + 2;
     this.speedX = (Math.random() - 0.5) * 1.5;
     this.speedY = (Math.random() - 0.5) * 1.5;
     this.color = "rgba(0, 255, 255, 0.9)"; // ciano
-    this.life = 120; // dura um pouco mais
+    this.life = 120;
   }
   update() {
     this.x += this.speedX;
@@ -45,23 +50,17 @@ class Sparkle {
 }
 
 function animate() {
-  ctx.clearRect(0,0,canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   sparkles.forEach((s, i) => {
     s.update();
     s.draw();
-    if(s.life <= 0) sparkles.splice(i,1);
+    if (s.life <= 0) sparkles.splice(i, 1);
   });
   requestAnimationFrame(animate);
 }
-animate();
 
 canvas.addEventListener("mousemove", e => {
-  for(let i=0;i<4;i++){ // mais sparkles por movimento
+  for (let i = 0; i < 5; i++) { // mais sparkles por movimento
     sparkles.push(new Sparkle(e.clientX, e.clientY));
   }
-});
-
-window.addEventListener("resize", ()=>{
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
 });
