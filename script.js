@@ -20,7 +20,6 @@ function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
-
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
@@ -33,7 +32,7 @@ class Sparkle {
     this.size = Math.random() * 4 + 2;
     this.speedX = (Math.random() - 0.5) * 1.5;
     this.speedY = (Math.random() - 0.5) * 1.5;
-    this.color = "rgba(0, 255, 255, 0.9)"; // ciano
+    this.color = "rgba(0, 255, 255, 0.9)"; // CIANO
     this.life = 120;
   }
   update() {
@@ -60,7 +59,7 @@ function animate() {
 }
 
 canvas.addEventListener("mousemove", e => {
-  for (let i = 0; i < 5; i++) { // mais sparkles por movimento
+  for (let i = 0; i < 5; i++) {
     sparkles.push(new Sparkle(e.clientX, e.clientY));
   }
 });
