@@ -1,10 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif;}
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
 
 body {
@@ -14,122 +8,69 @@ body {
   position: relative;
 }
 
-/* Overlay gradiente animado */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    rgba(0,0,0,0.65),
-    rgba(0,0,0,0.45),
-    rgba(0,0,0,0.65)
-  );
-  animation: gradientMove 14s ease infinite;
-  z-index: 2;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Sparkles */
 #sparkles {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 5; /* acima do overlay e card */
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:5; /* acima de tudo */
 }
 
-/* Container central */
 .container {
   position: relative;
-  z-index: 4; /* abaixo do canvas */
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index:4;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-/* Card */
 .card {
-  text-align: center;
-  padding: 2.5rem;
+  text-align:center;
+  padding:2rem;
   backdrop-filter: blur(12px);
-  background: rgba(0, 180, 255, 0.08);
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 180, 255, 0.5), 
-              0 0 40px rgba(0, 180, 255, 0.3), 
-              0 0 60px rgba(0, 180, 255, 0.2);
-  max-width: 360px;
-  width: 90%;
-  border: 1px solid rgba(0, 180, 255, 0.4);
-  z-index: 3;
+  background: rgba(0,180,255,0.08);
+  border-radius:20px;
+  box-shadow: 0 0 20px rgba(0,180,255,0.5),0 0 40px rgba(0,180,255,0.3);
+  max-width:360px;
+  width:90%;
 }
 
 .avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 2px solid rgba(255,255,255,0.4);
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  margin-bottom:1rem;
+  border:2px solid rgba(255,255,255,0.4);
 }
 
 h1 {
-  font-family: 'Rajdhani', sans-serif !important;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 28px;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 0 8px rgba(0, 180, 255, 0.6);
+  font-family: 'Rajdhani', sans-serif;
+  color: #fff;
+  font-weight:700;
+  font-size:28px;
+  margin-bottom:0.5rem;
+  text-shadow:0 0 8px rgba(0,180,255,0.6);
 }
 
 .role {
-  color: #d1d1d1;
-  font-size: 0.95rem;
-  min-height: 22px;
-  margin-bottom: 1.5rem;
+  color:#d1d1d1;
+  font-size:0.95rem;
+  min-height:22px;
+  margin-bottom:1.5rem;
 }
 
-/* Links neon */
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-}
-
+.links {display:flex; flex-direction:column; gap:0.7rem;}
 .links a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0.7rem 1rem;
-  border-radius: 12px;
+  color:#fff; text-decoration:none; padding:0.7rem 1rem; border-radius:12px;
   background: rgba(255,255,255,0.12);
   transition: all 0.3s ease, box-shadow 0.4s ease;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  font-weight: 500;
 }
-
-.links a i {
-  margin-right: 8px;
-}
-
 .links a:hover {
-  background: rgba(0, 180, 255, 0.2);
-  color: #00b4ff;
-  box-shadow: 0 0 10px #00b4ff, 0 0 20px #00b4ff, 0 0 30px #00b4ff;
-  transform: translateY(-3px);
-}
-
-@media screen and (max-width: 400px) {
-  .card {
-    padding: 1.8rem;
-  }
-  .avatar {
-    width: 100px;
-    height: 100px;
-  }
+  background: rgba(0,180,255,0.2);
+  color:#00b4ff;
+  box-shadow: 0 0 10px #00b4ff,0 0 20px #00b4ff,0 0 30px #00b4ff;
+  transform:translateY(-3px);
 }
